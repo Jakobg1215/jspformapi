@@ -1,9 +1,9 @@
 # JSPFormApi
 A simple form api for JSPrismarine!
 ## How to use it!
-First import all of the forms you want to use and the FormResponceEvent.
+First import all of the forms you want to use and the FormResponseEvent.
 ```ts
-import { ModalForm, FormResponceEvent } from "jspformapi";
+import { ModalForm, FormResponseEvent } from "jspformapi";
 ```
 Next create a form and add information to it!
 ```ts
@@ -19,14 +19,14 @@ Now send the form to a player!
 ```ts
 await form.sendFormToPlayer(Player);
 ```
-To recive a form responce do this!
+To recive a form response do this!
 ```ts
-new FormResponceEvent(this.api);
-this.api.getEventManager().getCustomEventManager().on("FormResponce", (event) => {
+new FormResponseEvent(this.api);
+this.api.getEventManager().getCustomEventManager().on("FormResponse", (event) => {
     // Your Code goes here!
 });
 ```
 # To Do
-- Make the FormResponceEvent not need to use this.api
-- Make it so you don't have to import FormResponceEvent possibly
+- Make the FormResponseEvent not need to use this.api
+- Make it so you don't have to import FormResponseEvent possibly
 - Add JSDoc to all functions

@@ -3,7 +3,7 @@ import ModalForm from "./forms/modalForm";
 import CustomForm from "./forms/customForm";
 import type Player from "@jsprismarine/prismarine/dist/player/Player";
 import ModalFormRequestPacket from "@jsprismarine/prismarine/dist/network/packet/ModalFormRequestPacket";
-import FormResponceEvent from "./events/formResponceEvent";
+import FormResponseEvent from "./events/formResponseEvent";
 
 async function sendRawToPlayer(player: Player, id: number, data: string): Promise<void> {
     const packet = new ModalFormRequestPacket();
@@ -17,5 +17,5 @@ export {
     ModalForm,
     CustomForm,
     sendRawToPlayer,
-    FormResponceEvent
+    FormResponseEvent
 }
