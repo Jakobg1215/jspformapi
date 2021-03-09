@@ -28,4 +28,3 @@ this.api.getEventManager().getCustomEventManager().on("FormResponce", (event) =>
 - Make the FormResponceEvent not need to use this.api
 - Make it so you don't have to import FormResponceEvent possibly
 - add constructors to every form
-- add the player to who send the FormResponceEvent
