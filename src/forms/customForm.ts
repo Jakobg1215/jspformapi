@@ -32,11 +32,4 @@ export default class CustomForm extends BaseForm {
         this.formData.content.push({ type: "input", text: text, placeholder: placeholder, default: state });
         return this;
     }
-    /**
-     * @deprecated
-     * Do not use unless you know what you are doing.
-     */
-    public setFormcontent(data: string): this {
-        return this;
-    }
 }

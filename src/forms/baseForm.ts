@@ -21,7 +21,7 @@ export default class BaseForm {
         this.formData.title = title;
         return this;
     }
-    public setFormcontent(content: string): this {
+    public setFormContent(content: string): this {
         this.formData.content = content;
         return this;
     }
