@@ -3,7 +3,7 @@ import type Player from "@jsprismarine/prismarine/dist/player/Player";
 
 export default class BaseForm {
     protected formData!: any;
-    protected formId = 0;
+    protected formId!: number;
     public getFormId(): number {
         return this.formId;
     }

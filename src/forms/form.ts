@@ -7,7 +7,13 @@ export default class Form extends BaseForm {
         content: "content",
         buttons: [] as object[]
     };
-    protected formId = 0;
+    protected formId: number;
+    public constructor({ id = 0, title = "title", content = "content" }) {
+        super();
+        this.formId = id;
+        this.formData.title = title;
+        this.formData.content = content;
+    }
     public getFormButtons(): object[] {
         return this.formData.buttons;
     }

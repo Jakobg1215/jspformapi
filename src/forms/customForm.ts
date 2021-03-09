@@ -6,7 +6,12 @@ export default class CustomForm extends BaseForm {
         title: "title",
         content: [] as object[]
     };
-    protected formId = 0;
+    protected formId!: number;
+    public constructor({ id = 0, title = "title" }) {
+        super();
+        this.formId = id;
+        this.formData.title = title;
+    }
     public addLabel(text: string): this {
         this.formData.content.push({ type: "label", text: text });
         return this;
@@ -25,6 +30,13 @@ export default class CustomForm extends BaseForm {
     }
     public addInput(text: string, placeholder = "", state = ""): this {
         this.formData.content.push({ type: "input", text: text, placeholder: placeholder, default: state });
+        return this;
+    }
+    /**
+     * @deprecated
+     * Do not use unless you know what you are doing.
+     */
+    public setFormcontent(data: string): this {
         return this;
     }
 }
