@@ -7,6 +7,7 @@ export default class FormResponceEvent {
     public constructor(api: PluginApi) {
         this.api = api;
         this.api.getEventManager().on("raknetEncapsulatedPacket", async (event: RaknetEncapsulatedPacketEvent) => {
+            const player = this.api.getServer().getPlayerManager().getPlayer(`${event.getInetAddr().getAddress()}:${event.getInetAddr().getPort()}`) ?? null;
             try {
                 const batched = new BatchPacket(this.api.getServer().getConfig(), event.getPacket().buffer);
                 batched.decode();
@@ -24,7 +25,8 @@ export default class FormResponceEvent {
                     try {
                         const event = {
                             id: packet.formId,
-                            data: JSON.parse(packet.formData)
+                            data: JSON.parse(packet.formData),
+                            sender: player
                         }
                         if (!event.data) return;
                         await this.api.getEventManager().getCustomEventManager().emit("FormResponce", event);
