@@ -28,7 +28,7 @@ export default class FormResponceEvent {
                             data: JSON.parse(packet.formData),
                             sender: player
                         }
-                        if (!event.data) return;
+                        if (event.data === null) return;
                         await this.api.getEventManager().getCustomEventManager().emit("FormResponce", event);
                     } catch (error) { }
                 }
