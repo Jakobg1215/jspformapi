@@ -9,7 +9,7 @@ export default class ModalForm extends BaseForm {
         button2: "button2"
     };
     protected formId: number;
-    public constructor({ id = 0, title = "title", content = "content", button1 = "button1", button2 = "button2" }) {
+    public constructor({ id = 0, title = "title", content = "content", button1 = "button1", button2 = "button2" } = {}) {
         super();
         this.formId = id;
         this.formData.title = title;

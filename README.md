@@ -7,11 +7,13 @@ import { ModalForm, FormResponceEvent } from "jspformapi";
 ```
 Next create a form and add information to it!
 ```ts
-const form = new ModalForm()
-    .setButton1("Yes")
-    .setButton2("No")
-    .setFormTitle("question")
-    .setFormcontent("Do you like how I did the forms?");
+const form = new ModalForm({
+    id: 69,
+    title: "question",
+    content: "content",
+    button1: "button1",
+    button2: "button2"
+});
 ```
 Now send the form to a player!
 ```ts
@@ -27,3 +29,4 @@ this.api.getEventManager().getCustomEventManager().on("FormResponce", (event) =>
 # To Do
 - Make the FormResponceEvent not need to use this.api
 - Make it so you don't have to import FormResponceEvent possibly
+- Add JSDoc to all functions
