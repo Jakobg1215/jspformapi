@@ -1,0 +1,20 @@
+{
+    "name": "jspformapi",
+    "version": "1.0.0",
+    "description": "A simple form api for JSPrismarine!",
+    "main": "./dist/src/index.js",
+    "author": "Jakobg1215",
+    "license": "MIT",
+    "dependencies": {
+        "@jsprismarine/prismarine": "^0.1.0-rc.43"
+    },
+    "keywords": [
+        "npm-package",
+        "minecraft-plugin",
+        "form-api"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Jakobg1215/JSPFormApi.git"
+    }
+}
