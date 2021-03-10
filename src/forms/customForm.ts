@@ -7,7 +7,7 @@ export default class CustomForm extends BaseForm {
         content: [] as object[]
     };
     protected formId!: number;
-    public constructor({ id = 0, title = "title" } = {}) {
+    public constructor({ id = 0, title = "title" }) {
         super();
         this.formId = id;
         this.formData.title = title;
